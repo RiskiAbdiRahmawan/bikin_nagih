@@ -1,0 +1,293 @@
+:root {
+    --primaryColor: #C3E2C2;
+    --secondaryColor: #EAECCC;
+    --textColor: #000000;
+    --mainFont: 'Open Sans', sans-serif;
+    --headingFont: 'Merriweather', serif;
+}
+
+body {
+    font-family: var(--mainFont);
+    color: var(--textColor);
+}
+
+
+/* Navbar */
+.navbar {
+    padding: 12px 0;
+    transition: all 0.5s ease;
+    box-shadow: 0px 4px 28px rgba(0, 0, 0, 0.04);
+}
+
+.navbar .navbar-brand img {
+    max-height: 60px;
+    width: auto;
+    transition: transform 0.3s ease;
+}
+
+.navbar .navbar-brand {
+    display: flex;
+    align-items: center;
+}
+
+.navbar .navbar-toggler {
+    outline: none;
+}
+
+.navbar .navbar-nav .nav-link {
+    margin-right: 20px;
+    color: var(--textColor);
+}
+
+.navbar .nav-link:hover, .navbar .nav-link:focus {
+    color: var(--primaryColor);
+}
+
+.card-img-top {
+    height: 300px;
+    object-fit: cover;
+}
+
+.custom-card {
+    background-color: transparent;
+    border: none;
+    box-shadow: none;
+}
+
+.custom-card .card-body {
+    padding: 0;
+}
+
+.modal-header {
+    background-color: rgb(255, 166, 0);
+    color: #fff;
+}
+
+.modal-content {
+    padding: 20px;
+}
+
+.form-label {
+    margin-bottom: 0.5rem;
+}
+
+.form-control {
+    margin-bottom: 1rem;
+}
+
+.btn-primary {
+    width: 100%;
+    padding: 10px;
+}
+
+/* Styling Umum */
+.card-menu {
+    position: relative;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 0.5rem;
+    margin-bottom: 2rem;
+}
+
+.card-menu .card-body {
+    padding: 1.25rem;
+}
+
+.menu-title {
+    font-size: 1.25rem;
+    font-weight: 500;
+}
+
+.card-text {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
+.text-warning {
+    color: #ffc107;
+}
+
+.btn-cart {
+    position: absolute; 
+    bottom: 10px;
+    right: 10px;
+    border-radius: 0.25rem;
+}
+
+.modal-product-image {
+    width: 100%;
+    height: auto;
+    max-height: 400px;
+    object-fit: cover;
+}
+
+/* Menghilangkan efek scroll */
+.row {
+    overflow-x: hidden;
+    flex-wrap: wrap;
+}
+
+.d-flex {
+    overflow-x: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.d-flex::-webkit-scrollbar {
+    display: none;
+}
+
+.card-menu:hover {
+    transform: translateY(-20px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+/* Newsletter */
+section.newslatter {
+    padding-top: 7rem;
+}
+
+section.newslatter .newslatter-content {
+    padding: 6rem;
+    border-radius: 10px;
+}
+
+section.newslatter .newslatter-content .form-newslatter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+section.newslatter .newslatter-content .form-newslatter input.form-control {
+    border: none;
+    padding: 1.25rem 1rem;
+    font-size: 1rem;
+}
+
+/* Penyesuaian untuk tombol */
+section.newslatter .newslatter-content .form-newslatter a.btn {
+    padding: 1.25rem 1.5rem;
+    font-size: 1rem;
+    line-height: 1;
+    vertical-align: middle;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Pastikan bahwa width dari form input dan button sesuai keinginan */
+section.newslatter .newslatter-content .form-newslatter {
+    width: auto;
+}
+
+/* Testimoni Styling */
+.bg-light {
+    background-color: #f8f9fa!important;
+}
+
+.card {
+    border: none;
+    border-radius: .5rem;
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.card-text {
+    font-size: 1rem;
+    color: #495057;
+    font-style: italic;
+}
+
+footer {
+    align-self: end;
+}
+
+
+
+.animate-up.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+
+
+
+/* Responsiveness */
+@media (max-width: 992px) {
+    .home-content, .home-img {
+        text-align: center;
+    }
+
+    .home-img .img-oval {
+        max-width: 90%;
+    }
+}
+
+@media (min-width: 768px) {
+    .home-img .img-oval {
+        max-width: 400px;
+    }
+
+    .card-menu {
+        height: auto;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .d-flex.flex-row.flex-nowrap {
+        overflow-x: auto;
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+
+    .d-flex.flex-row.flex-nowrap::-webkit-scrollbar {
+        display: none;
+    }
+
+    .btn-cart {
+        top: 0.5rem;
+        left: 0.5rem;
+        bottom: auto;
+        right: auto;
+    }
+
+    .card-menu {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .card-menu .card-body {
+        margin-top: auto;
+    }
+}
+
+@media (max-width: 768px) {
+    section.newslatter {
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+    }
+
+    section.newslatter .newslatter-content {
+        padding: 2rem 1rem;
+    }
+
+    section.newslatter .newslatter-content .form-newslatter {
+        flex-direction: column;
+    }
+
+    section.newslatter .newslatter-content .form-newslatter input.form-control {
+        width: auto;
+        max-width: 500px;
+        margin-bottom: 1rem;
+    }
+
+    section.newslatter .newslatter-content .form-newslatter a.btn {
+        width: auto;
+        padding: 1rem 2rem;
+    }
+}
